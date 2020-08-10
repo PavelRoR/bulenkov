@@ -13,6 +13,13 @@
 -var formVc = '';
 //- -var footer_title = true
 //- -var oferta = 'https://mastervision.su/oferta.docx'
+-var href = '#Modal';
+
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl,href,p,target,id)
+	a.button.button-up(class=cl href=href target=target id=id)=p
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -21,8 +28,15 @@ html(lang="ru")
 		include pug/scripts/head_scripts
 	body
 		include pug/scripts/body_top_scripts
-		.container
-			h1 In the development...
+		include pug/main/1-main
+		include pug/main/2-video
+		include pug/main/3-for
+		include pug/main/4-benefits
+		include pug/main/5-author
+		include pug/main/6-revs
+		include pug/base/2-footer
+		include pug/main/7-modal
+		include pug/base/3-scripts
 		//- include pug/scripts
 		//- include pug/scripts/chat
 		include pug/scripts/body_bottom_scripts
