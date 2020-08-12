@@ -44,11 +44,11 @@ $(document).ready(function () {
         });
         check.click(function () {
             check.next().css({
-                "color": "#000",
+                "color": "#fff",
                 'transition': 'all .4s ease'
             });
             check.next().children().css({
-                "color": "#000",
+                "color": "#fff",
                 'transition': 'all .4s ease'
             });
             message.slideUp(500);
