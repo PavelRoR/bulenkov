@@ -1,10 +1,7 @@
-.mfp-fade.mfp-bg.mfp-ready
-	background-color: #fff
-	opacity .95 !important
 .white-popup
 	position: relative;
 	background: #FFF;
-	padding: 20px;
+	padding: 70px 20px 30px
 	width: auto;
 	max-width: 500px;
 	margin: 20px auto;
@@ -14,10 +11,21 @@
 	background-size: cover
 	border-radius: 7px
 	box-shadow: 0px 0px 33.44px 4.56px rgba(45, 45, 47, 0.15);
+.form-modal
+	position relative
 .form-title-modal
 	width 100%
+	max-width 320px
+	margin 0 auto
+	top -95px
+	left 0
+	right 0
 	text-align center
-	margin-bottom: 30px
+	position absolute
+	padding 10px
+	background-color: #206e9a
+	background-image linear-gradient(to left, #206e9a, #206e9a)
+	border-radius: 7px
 .input-mail-modal
 	float: none
 	display block
@@ -36,13 +44,11 @@
 		line-height: 18px
 .mfp-fade.mfp-bg
 	opacity: 0;
-	-webkit-transition: all 0.15s ease-out;
-	-moz-transition: all 0.15s ease-out;
-	transition: all 0.15s ease-out;
+	transition: all 0.2s ease-out;
 
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready
-	opacity: 0.8;
+	opacity: 0.95
 
 /* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing
@@ -52,9 +58,7 @@
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content
 	opacity: 0;
-	-webkit-transition: all 0.15s ease-out;
-	-moz-transition: all 0.15s ease-out;
-	transition: all 0.15s ease-out;
+	transition: all 0.65s ease-out;
 
 /* content animate it */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content
