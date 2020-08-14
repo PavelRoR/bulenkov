@@ -9,6 +9,7 @@
 .main-wrapper
 	overflow hidden
 	width 100%
+	padding 0 0 60px
 .main-title
 	position relative
 	padding-top: 50px
@@ -49,14 +50,44 @@
 		background-position: center
 		left -25px
 		top calc(50% - 25px)
+	p
+		span
+			display inline-block
 .main-img
 	position relative
 	padding-top: 90%
 	// overflow hidden
 	img
 		position absolute
-		bottom:  -50px
+		bottom:  -110px
 		left -250px
+.main-about
+	position absolute
+	padding 15px 50px
+	left -50px
+	bottom: 100px
+	width 450px
+	&:before
+		content: ''
+		display block
+		position absolute
+		background-color: #1a9bae
+		width 100%
+		height 100%
+		border-radius: 7px
+		transform: skew(-14deg)
+		top 0
+		left 0
+		z-index 0
+	p
+		position relative
+		z-index 20
+		font-size: 12px
+		span
+			display block
+			font-size: 14px
+			font-family: Gd
+			font-weight: bold
 .main-form-wrapper
 	position relative
 	// overflow hidden
