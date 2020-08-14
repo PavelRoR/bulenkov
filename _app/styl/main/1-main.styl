@@ -103,11 +103,19 @@
 .input
 	border-radius: 7px
 	border: 1px solid #afafb0
-	background-color: transparent
+	background-color: transparent !important
 	padding 17px 10px 17px 50px
 	color #fff
+	&:active
+	&:focus
+	&:hover
+		background-color: transparent !important
+		background-image url(../img/icons/envelope.png)  !important
+		background-repeat no-repeat
+		background-position: left 20px center
+		font-size: 16px
 	&-mail
-		background-image url(../img/icons/envelope.png)
+		background-image url(../img/icons/envelope.png)  !important
 		background-repeat no-repeat
 		background-position: left 20px center
 		&-main
@@ -116,12 +124,26 @@
 	float: right
 @-webkit-keyframes autofill
 	to
-		font-size: 20px
-		color: #000;
-		background-color: #fff
+		font-size: 16px
+		color: #fff;
+		background-color: transparent
+input:-internal-autofill-selected
 input:-webkit-autofill
 	-webkit-animation-name: autofill;
 	-webkit-animation-fill-mode: both;
+input:-internal-autofill-selected
+	background-color: transparent !important
+	background-image url(../img/icons/envelope.png) !important
+	background-repeat no-repeat
+	background-position: left 20px center
+	&:active
+	&:focus
+	&:hover
+		background-color: transparent !important
+		background-image url(../img/icons/envelope.png) !important
+		background-repeat no-repeat
+		background-position: left 20px center
+		font-size: 16px
 .alert-message {
 	clear both
 	display: none;

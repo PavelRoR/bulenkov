@@ -1,0 +1,43 @@
+-var path = '../';
+-var head_url = 'https://bulenkov.mycapitalland.ru/thanks/';
+-var head_title = 'Поздравляем! Вы успешно зарегистрировались на онлайн-мастер-класс';
+-var head_description = 'Для подтверждения своего участия зайдите на почту и перейдите по ссылке в письме';
+//- -var head_img = 'img/banner.jpg';
+-var styles = path+'css/thanks.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl,href,p,target,id)
+	a.button.button-up(class=cl href=href target=target id=id)=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main
+			.container
+				include pug/base/1-header
+				h1.main-title 
+					span ПОЗДРАВЛЯЕМ!
+					| Вы успешно зарегистрировались на онлайн-марафон
+				p.main-text Для подтверждения своего участия зайдите на почту и перейдите по ссылке в письме
+				.mails
+					a.email-link(href="http://e.mail.ru/" target="_blank")
+						img.email-img(src=path+"img/icons/mailru.png", alt="Mail.ru")
+					a.email-link(href="https://mail.yandex.ru/" target="_blank")
+						img.email-img(src=path+"img/icons/yandex.png", alt="Yandex")
+					a.email-link(href="http://gmail.com/" target="_blank")
+						img.email-img(src=path+"img/icons/gmail.png", alt="Gmail")
+					a.email-link(href="https://mail.rambler.ru/" target="_blank")
+						img.email-img(src=path+"img/icons/rambler.png", alt="Rambler")
+		include pug/base/2-footer
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
